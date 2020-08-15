@@ -1,4 +1,4 @@
-## aleph-notas 1.1
+## aleph-examen 1.0
 
 Esta clase fue creada para dar formato a exámenes. Esta clase genera el encabezado y los ambientes necesarios para ocultar automáticamente las soluciones, entre otros. Esta clase fue generada dentro del proyecto Alephsub0 (url{https://www.alephsub0.org/)
 
