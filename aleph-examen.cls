@@ -18,7 +18,7 @@
 %% --- Identificación
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NeedsTeXFormat{LaTeX2e}[2009/09/24]
-\ProvidesClass{aleph-examen}[2020/01/07 v1.0]
+\ProvidesClass{aleph-examen}[2020/08/15 v1.0]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% --- Inicialización
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -41,7 +41,8 @@
     a5paper,left=1cm,right=1cm,top=0.5cm,bottom=0.5cm,includefoot}{geometry}
     }
 \DeclareOption{compacto}{\PassOptionsToPackage{
-    paperwidth=160mm,paperheight=240mm,left=1cm,right=1cm,top=0.5cm,bottom=0.5cm,includefoot}{geometry}
+    paperwidth=160mm,paperheight=240mm,
+    left=1cm,right=1cm,top=0.5cm,bottom=0.5cm,includefoot}{geometry}
     }
 %%  Opción para desplegar respuestas
 \DeclareOption{respuestas}{\setboolean{resp}{true}}
@@ -77,7 +78,7 @@
 %% --- Variables internas
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  La siguiente es la lista de las variables internas utilizadas para el formato.
-\newcommand\@universidad{Escuela Politécnica Nacional}
+\newcommand\@universidad{Escuela de Ciencias Físicas y Matemática}
 \newcommand\@firma{\hspace{0pt}}
 \newcommand\@notapie{\hspace{0pt}}
 \newcommand\@longtitulo{0.75\linewidth}
@@ -105,6 +106,9 @@
 %%  Examen
 \newcommand{\examen}[1]%
     {\newcommand\@examen{#1}}
+%%  Carrera
+\newcommand{\carrera}[1]%
+    {\newcommand\@carrera{ #1}}
 %%  Tema
 \newcommand{\tema}[1]%
     {\newcommand\@tema{ #1}}
@@ -147,6 +151,7 @@
     \large\textbf{\textsc{\@universidad\\
     \ifthenelse{\isundefined{\@hoja}}{}{\@hoja\\}
     \normalsize
+    \ifthenelse{\isundefined{\@carrera}}{}{\normalsize\textsc{\@carrera}\\}
     \@materia\ \ $\bullet$\ \
     \@examen}}\\
     \ifthenelse{\isundefined{\@tema}}{}{\normalsize\textsc{\@tema}\\}

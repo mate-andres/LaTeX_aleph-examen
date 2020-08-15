@@ -15,20 +15,20 @@
 \newcommand{\package}[1]{\texttt{#1}}
 
 \title{\file{aleph-examen.cls}}
-\author{Andr\'es Merino}
-\date{2020-01-07}
+\author{Proyecto Alephsub0\\ Andr\'es Merino}
+\date{2020-08-15\\ Versión 1.0}
 
 \begin{document}
  
 \maketitle
  
 \begin{abstract}
-    \file{aleph-examen.cls} es una clase creada para dar formato a exámenes y hojas de ejercicios.
+    \file{aleph-examen.cls} es una clase creada para dar formato a exámenes y hojas de ejercicios. Esta clase fue generada dentro del proyecto Alephsub0 (\url{https://www.alephsub0.org/}).
 \end{abstract}
 
 \section{Introducción}
 
-La clase \file{aleph-examen.cls} es parte del conjunto de clases y paquetes creados por Andrés Merino. Esta clase provee el formato para generar exámenes, pruebas, hojas de ejercicios, hojas de datos y hojas de respuestas. En especial, las hojas de datos y de respuestas están enfocadas a la toma de pruebas masivas dadas en la Escuela Politécnica Nacional.
+La clase \file{aleph-examen.cls} es parte del conjunto de clases y paquetes creados por Andrés Merino. Esta clase provee el formato para generar exámenes, pruebas, hojas de ejercicios, hojas de datos y hojas de respuestas. En especial, las hojas de datos y de respuestas están enfocadas a la toma de pruebas masivas que tienen lugar en la Escuela Politécnica Nacional.
 
 \section{Uso}
 
@@ -72,13 +72,14 @@ o\\
 \DescribeMacro{\universidad} 
     El comando universidad tiene el formato\\
         \hspace*{3em}\cs{universidad}\marg{nombre de la universidad}.\\
-    este comando es opcional, de no estar presente, el nombre de universidad por defecto es Pontificia Universidad Católica (institución donde trabaja actualmente el autor de la clase).
+    este comando es opcional, de no estar presente, el nombre de universidad por defecto es Escuela de Ciencias Físicas y Matemática (lugar donde trabaja actualmente el autor de la clase).
 
+\DescribeMacro{\carrera} 
 \DescribeMacro{\materia}
 \DescribeMacro{\examen}
 \DescribeMacro{\autor}
 \DescribeMacro{\fecha} 
-    Los comandos \cmd{\materia}, \cmd{\examen}, \cmd{\autor} y \cmd{\fecha} dan la información que se utilizará en el encabezado, todas estas son obligatorias para generar exámenes u hojas de datos. No son empleadas al generar hojas de respuestas (no es necesarios incluirlos en estas hojas). El contenido de \cmd{\materia} y \cmd{\examen} se despliega en forma centrada mientras que el de \cmd{\autor} y \cmd{\fecha} se despliega en los extremos de la página.
+    Los comandos \cmd{\carrera} (opcional), \cmd{\materia}, \cmd{\examen}, \cmd{\autor} y \cmd{\fecha} dan la información que se utilizará en el encabezado, todas estas son obligatorias para generar exámenes u hojas de datos. No son empleadas al generar hojas de respuestas (no es necesarios incluirlos en estas hojas). El contenido de \cmd{\materia} y \cmd{\examen} se despliega en forma centrada mientras que el de \cmd{\autor} y \cmd{\fecha} se despliega en los extremos de la página.
 
 \DescribeMacro{\hoja}
 \DescribeMacro{\tema}
@@ -177,8 +178,9 @@ Un examen puede tener la siguiente forma:
     \item
         Encontrar los extremos de la función
         \[
-            \funcion{f}{\R^3}{\R}{(x,y,z)}{\frac{x^2}{2} + \frac{y^2}{2} + \frac{z^2}{2}}
-    	\]
+            \funcion{f}{\R^3}{\R}{(x,y,z)}{\frac{x^2}{2} 
+            + \frac{y^2}{2} + \frac{z^2}{2}}
+        \]
         
     \begin{respuesta}
         La función no tiene extremo.
@@ -218,7 +220,8 @@ Una hoja de datos puede tener la siguiente forma:
         \item
             Deberá permanecer en el aula durante los primeros 45 minutos.
         \item 
-            No escriba su nombre en las hojas de respuestas, únicamente su código, que lo encontrará en esta hoja.	
+            No escriba su nombre en las hojas de respuestas, únicamente su código, 
+            que lo encontrará en esta hoja.	
         }
     
     
